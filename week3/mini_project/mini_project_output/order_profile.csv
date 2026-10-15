@@ -1,0 +1,4 @@
+dataset,rows,duplicate_order_id,null_price,null_quantity,null_category,price_le_0,quantity_ge_6,category_values
+before,1015,15,30,0,0,0,0,5
+median_imputation,1015,15,0,0,0,0,0,5
+drop_missing_rows,985,15,0,0,0,0,0,5
