@@ -12,7 +12,7 @@
 1) orders_clean.parquet
 2) (quality_report.csv + quality_report.md)
 
-2. 실행방법
+3. 실행방법
    source .venv/bin/activate        # Windows(WSL2)·macOS·리눅스 같습니다
    python3 clean_orders.py
 
