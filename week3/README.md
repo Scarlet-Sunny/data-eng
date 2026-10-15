@@ -27,7 +27,7 @@
 - `quality_report.md`, `quality_report.csv`: 품질 점검 결과
 
 3. 실행방법
-   source .venv/bin/activate        # Windows(WSL2)·macOS·리눅스 같습니다
-   python3 clean_orders.py
+   - source .venv/bin/activate        # Windows(WSL2)·macOS·리눅스 같습니다
+   - python3 clean_orders.py
 
 
