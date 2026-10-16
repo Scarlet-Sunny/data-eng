@@ -1,3 +1,0 @@
-engine,rows,duplicate_event_id,null_user_id,null_event_type,null_value,null_ts,value_le_0,value_gt_9900,distinct_event_type,elapsed_seconds
-Pandas,1000000,0,0,0,0,0,0,0,3,0.09850313799961441
-DuckDB SQL,1000000,0,0,0,0,0,0,0,3,0.05942614500054333
