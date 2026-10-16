@@ -79,6 +79,7 @@ def compare_statistics(median_df: pd.DataFrame,
             row[f"{column}_mean"] = values.mean()
             row[f"{column}_median"] = values.median()
             row[f"{column}_std"] = values.std()
+            row[f"{column}_sum"] = values.sum()
 
         rows.append(row)
 
