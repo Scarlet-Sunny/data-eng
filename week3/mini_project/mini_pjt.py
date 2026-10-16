@@ -175,8 +175,12 @@ def main() -> None:
 
     # 1. 주문 데이터 품질 프로파일
     orders = pd.read_csv(orders_path)
-    median_df = median_imputation(orders)
-    dropped_df = drop_missing_rows(orders)
+    deduplicated_orders = orders.drop_duplicates(
+        subset=["order_id"], keep="first"
+    ).copy()
+
+    median_df = median_imputation(deduplicated_orders)
+    dropped_df = drop_missing_rows(deduplicated_orders)
 
     order_profile = pd.DataFrame([
         profile(orders, "before"),
@@ -219,7 +223,7 @@ def main() -> None:
 
 중앙값 대체는 가격과 수량의 결측을 각 열의 중앙값으로 채웁니다.
 행 제거는 가격·수량·카테고리 중 하나라도 결측인 행을 제외합니다.
-두 결과의 평균, 중앙값, 표준편차와 남은 행 수를 비교하세요.
+평균은 거의 같은데 행을 버리면 합계가 줄어든다.
 
 ## 이벤트 데이터 엔진별 측정 결과
 

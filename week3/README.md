@@ -28,6 +28,12 @@
 
 3. 실행방법
    - source .venv/bin/activate        # Windows(WSL2)·macOS·리눅스 같습니다
-   - ex) python3 clean_orders.py
-
-
+   # 실습용 데이터 생성
+   - python3 make_orders.py 
+   - python3 make_events.py
+   - python3 make_customers.py
+   # 데이터 변환 및 정제
+   - python3 clean_orders.py
+   - python3 quality_report.py 
+   # 품질 및 결과 검증
+   - python3 quality_report.py
