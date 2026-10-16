@@ -1,3 +1,11 @@
 .venv/
 __pycache__/
 events*
+week2/.venv/
+.Rhistory
+week3/events*.csv
+week3/events*.parquet
+week3/events_parted/
+week3/t1.parquet
+week3/t2.parquet
+week3/100000
