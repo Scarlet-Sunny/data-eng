@@ -1,0 +1,95 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /tmp/.ivy2/cache
+The jars for the packages stored in: /tmp/.ivy2/jars
+org.apache.hadoop#hadoop-aws added as a dependency
+org.apache.iceberg#iceberg-spark-runtime-3.5_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-1639c5a3-1954-4a25-b5f8-3e87fad9270a;1.0
+	confs: [default]
+	found org.apache.hadoop#hadoop-aws;3.3.4 in central
+	found com.amazonaws#aws-java-sdk-bundle;1.12.262 in central
+	found org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central
+	found org.apache.iceberg#iceberg-spark-runtime-3.5_2.12;1.5.2 in central
+:: resolution report :: resolve 163ms :: artifacts dl 10ms
+	:: modules in use:
+	com.amazonaws#aws-java-sdk-bundle;1.12.262 from central in [default]
+	org.apache.hadoop#hadoop-aws;3.3.4 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-3.5_2.12;1.5.2 from central in [default]
+	org.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   0   |   0   |   0   ||   4   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-1639c5a3-1954-4a25-b5f8-3e87fad9270a
+	confs: [default]
+	0 artifacts copied, 4 already retrieved (0kB/5ms)
+26/10/29 13:33:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[mart] 대상 날짜: 전체
+26/10/29 13:33:38 INFO SparkContext: Running Spark version 3.5.3
+26/10/29 13:33:38 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/29 13:33:38 INFO SparkContext: Java version 11.0.24
+26/10/29 13:33:38 INFO ResourceUtils: ==============================================================
+26/10/29 13:33:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/29 13:33:38 INFO ResourceUtils: ==============================================================
+26/10/29 13:33:38 INFO SparkContext: Submitted application: daily-sales-mart
+26/10/29 13:33:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/29 13:33:38 INFO ResourceProfile: Limiting resource is cpu
+26/10/29 13:33:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/29 13:33:38 INFO SecurityManager: Changing view acls to: spark
+26/10/29 13:33:38 INFO SecurityManager: Changing modify acls to: spark
+26/10/29 13:33:38 INFO SecurityManager: Changing view acls groups to: 
+26/10/29 13:33:38 INFO SecurityManager: Changing modify acls groups to: 
+26/10/29 13:33:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+26/10/29 13:33:38 INFO Utils: Successfully started service 'sparkDriver' on port 45597.
+26/10/29 13:33:38 INFO SparkEnv: Registering MapOutputTracker
+26/10/29 13:33:38 INFO SparkEnv: Registering BlockManagerMaster
+26/10/29 13:33:38 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/29 13:33:38 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/29 13:33:38 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/29 13:33:38 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-dcb75c1b-96e8-4dfb-93ba-8d4fcae07022
+26/10/29 13:33:38 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/29 13:33:38 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/29 13:33:38 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/29 13:33:38 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/29 13:33:38 INFO SparkContext: Added JAR file:///tmp/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at spark://9e712041d340:45597/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO SparkContext: Added JAR file:///tmp/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar at spark://9e712041d340:45597/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO SparkContext: Added JAR file:///tmp/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at spark://9e712041d340:45597/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO SparkContext: Added JAR file:///tmp/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at spark://9e712041d340:45597/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO SparkContext: Added file file:///tmp/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at spark://9e712041d340:45597/files/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO Utils: Copying /tmp/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar to /tmp/spark-1f899234-9a32-4f19-a2db-e9539286f791/userFiles-f9270ad3-ac44-40d3-ad0f-7874e4c659d7/org.apache.hadoop_hadoop-aws-3.3.4.jar
+26/10/29 13:33:38 INFO SparkContext: Added file file:///tmp/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar at spark://9e712041d340:45597/files/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO Utils: Copying /tmp/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar to /tmp/spark-1f899234-9a32-4f19-a2db-e9539286f791/userFiles-f9270ad3-ac44-40d3-ad0f-7874e4c659d7/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.5.2.jar
+26/10/29 13:33:38 INFO SparkContext: Added file file:///tmp/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at spark://9e712041d340:45597/files/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793280818304
+26/10/29 13:33:38 INFO Utils: Copying /tmp/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar to /tmp/spark-1f899234-9a32-4f19-a2db-e9539286f791/userFiles-f9270ad3-ac44-40d3-ad0f-7874e4c659d7/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar
+26/10/29 13:33:39 INFO SparkContext: Added file file:///tmp/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at spark://9e712041d340:45597/files/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793280818304
+26/10/29 13:33:39 INFO Utils: Copying /tmp/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar to /tmp/spark-1f899234-9a32-4f19-a2db-e9539286f791/userFiles-f9270ad3-ac44-40d3-ad0f-7874e4c659d7/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar
+26/10/29 13:33:39 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+26/10/29 13:33:39 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.3:7077 after 22 ms (0 ms spent in bootstraps)
+26/10/29 13:33:39 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20261029133339-0005
+26/10/29 13:33:39 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261029133339-0005/0 on worker-20261029041248-172.19.0.5-41483 (172.19.0.5:41483) with 2 core(s)
+26/10/29 13:33:39 INFO StandaloneSchedulerBackend: Granted executor ID app-20261029133339-0005/0 on hostPort 172.19.0.5:41483 with 2 core(s), 1024.0 MiB RAM
+26/10/29 13:33:39 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20261029133339-0005/1 on worker-20261029041248-172.19.0.4-45351 (172.19.0.4:45351) with 2 core(s)
+26/10/29 13:33:39 INFO StandaloneSchedulerBackend: Granted executor ID app-20261029133339-0005/1 on hostPort 172.19.0.4:45351 with 2 core(s), 1024.0 MiB RAM
+26/10/29 13:33:39 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37483.
+26/10/29 13:33:39 INFO NettyBlockTransferService: Server created on 9e712041d340:37483
+26/10/29 13:33:39 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/29 13:33:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 9e712041d340, 37483, None)
+26/10/29 13:33:39 INFO BlockManagerMasterEndpoint: Registering block manager 9e712041d340:37483 with 434.4 MiB RAM, BlockManagerId(driver, 9e712041d340, 37483, None)
+26/10/29 13:33:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 9e712041d340, 37483, None)
+26/10/29 13:33:39 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 9e712041d340, 37483, None)
+26/10/29 13:33:39 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261029133339-0005/0 is now RUNNING
+26/10/29 13:33:39 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20261029133339-0005/1 is now RUNNING
+26/10/29 13:33:39 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[mart] 원천 5행
+[mart] 마트 3행
+26/10/29 13:33:49 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
++----------+------------+---------+
+|order_date|daily_amount|order_cnt|
++----------+------------+---------+
+|2026-08-24|      113000|        2|
+|2026-08-25|     1155000|        2|
+|2026-08-26|       46000|        1|
++----------+------------+---------+
+
+[mart] 완료
