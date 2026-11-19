@@ -1,7 +1,7 @@
-README 에 들어갈 것 
+8주차 총정리 · Airflow 자동화와 RAG 챗봇README 에 들어갈 것 
 1. 아키텍처 한 장 그림
 
-/아키텍쳐.png
+- 아키텍쳐.png
 
 2. airflow 컨테이너 변경
 airflow-apiserver      ← 사람이 보는 화면 (8080) · 워커의 보고 창구
